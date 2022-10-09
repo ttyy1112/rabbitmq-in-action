@@ -1,0 +1,19 @@
+server:
+  port: 8088
+
+logging:
+  config: classpath:logging-config.xml
+  level:
+    org.springframework: info
+    org.springframework.amqp.rabbit: debug
+    org.springframework.amqp.rabbit.core: debug
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    dynamic: true
